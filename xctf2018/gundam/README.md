@@ -3,7 +3,7 @@
 ## Review
 * I alway prefer ubuntu 16.04 version when i solve the ctf.
 * I could not find the vulnerability in this binary.
-* Finally, I found that the version of libc is 2.26.(CMD => strings libc.so.6 | grep "libc-")
+* Finally, I found that the version of libc is 2.26.(CMD => `strings libc.so.6 | grep "libc-"`)
 * In server, this binary is running on ubuntu 17.10.
 * Then, I count`t execute this binary with server libc.
 * ubuntu 17.04 => libc-2.25, ubuntu 17.10 => libc-2.26
@@ -28,5 +28,5 @@
 ## Exploit 
 
 * libc-2.26 version can be double-free regardless of size.
-* So you can do exploit using __free_hook() address , system() address 
+* So you can do exploit using **__free_hook()** address , **system()** address 
 * It is recommended that you are debugging yourself for details.
